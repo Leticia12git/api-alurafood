@@ -72,11 +72,11 @@ public class PagamentoService {
     }
 
     /**
-     * metodo para deletar um pagamento
+     * metodo para excluir um pagamento
      *
      * @param id
      */
-    public void deletarPagamento(Long id) {
+    public void excluirPagamento(Long id) {
         repository.deleteById(id);
     }
 
