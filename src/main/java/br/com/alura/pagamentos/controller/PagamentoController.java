@@ -15,7 +15,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping(name = "/pagamentos")
+@RequestMapping(value = "/pagamentos")
 public class PagamentoController {
 
     @Autowired
@@ -40,7 +40,7 @@ public class PagamentoController {
      * @return ResponseEntity<PagamentoDto>
      */
 
-    @GetMapping("/{id")
+    @GetMapping("/{id}")
     public ResponseEntity<PagamentoDto> detalhar(@PathVariable @NotNull Long id) {
         PagamentoDto dto = service.obterPorId(id);
         return ResponseEntity.ok(dto);
